@@ -26,8 +26,8 @@ export const CurrentDelegation: React.FC<CurrentDelegationProps> = ({
 
   if (!delegationInfo || !delegationInfo.active) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-        <h3 className="text-xl font-semibold text-gray-900 mb-4">
+      <div className="bg-white rounded-xl  p-6 border border-gray-100">
+        {/* <h3 className="text-xl font-semibold text-gray-900 mb-4">
           Current Delegation Status
         </h3>
         <div className="text-center py-8">
@@ -37,7 +37,7 @@ export const CurrentDelegation: React.FC<CurrentDelegationProps> = ({
           <p className="text-gray-600">
             You haven't delegated your voting rights yet.
           </p>
-        </div>
+        </div> */}
       </div>
     );
   }

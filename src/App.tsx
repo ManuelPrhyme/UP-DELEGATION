@@ -98,7 +98,11 @@ function App() {
               </div>
             </div>
 
-            <button
+           
+            
+            <div className="flex items-center space-x-4">
+             
+               <button
             style={{display: account ? 'flex' : 'none'}}
             onClick={disconnect}
             disabled={isConnecting}
@@ -106,26 +110,6 @@ function App() {
           >
             {!isConnecting ? 'Disconnect' : 'Disconnecting...'}
           </button>
-            
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://unlock-protocol.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 flex items-center text-sm"
-              >
-                <ExternalLink className="w-4 h-4 mr-1" />
-                Unlock Protocol
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              
             </div>
           </div>
         </div>
@@ -175,21 +159,21 @@ function App() {
         {isConnected && isOnBase && (
           <>
             {/* Delegation Statistics */}
-            <div className="mb-8">
-              <DelegationStats stats={stats} loading={loading} />
-            </div>
+            {/* <div className="mb-8"> */}
+              {/* <DelegationStats stats={stats} loading={loading} /> */}
+            {/* </div> */}
 
             {/* Current Delegation Status */}
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <CurrentDelegation
                 delegationInfo={delegationInfo}
                 loading={loading}
                 account={account!}
               />
-            </div>
+            </div> */}
 
             {/* Delegation Interface */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mb-8">
               {/* Self/Custom Delegation */}
               <DelegationForm
                 account={account!}
@@ -199,12 +183,12 @@ function App() {
               />
 
               {/* Steward Delegation */}
-              <StewardList
+              {/* <StewardList
                 stewards={stewards}
                 loading={loading}
                 onDelegate={handleDelegateToSteward}
                 delegating={loading}
-              />
+              /> */}
             </div>
           </>
         )}
